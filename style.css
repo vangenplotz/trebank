@@ -1,0 +1,12 @@
+/*
+Theme Name: Trebank theme
+Description: Trebank
+Author: Vangen & Plotz AS
+Template: trebank
+*/
+
+@import url("../vantage/style.css");
+
+#site-title a {
+    color: #009900;
+}
