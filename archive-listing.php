@@ -74,6 +74,4 @@ if ( have_posts() ) : ?>
 
 </div>
 
-<div id="sidebar">
-	<?php get_sidebar( app_template_base() ); ?>
-</div>
+
