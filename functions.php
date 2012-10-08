@@ -16,4 +16,17 @@ if (file_exists(STYLESHEETPATH. '/theme-options.php')) include_once ( STYLESHEET
 	}
 add_action( 'init', 'register_trebank_menu' );
 
+function showalltags() {
+ 
+	$tags = get_tags();
+	$html;
+	foreach ($tags as $tag){
+		$tag_link = get_tag_link($tag->term_id);
+ 
+		$html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
+		$html .= "{$tag->name}</a>";
+	}
+	echo $html;
+ 
+}
 ?>
