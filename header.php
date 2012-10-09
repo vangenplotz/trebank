@@ -13,6 +13,8 @@
         <input class="sbutton" type="image" alt="Search" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/search.png" />
     </fieldset>
 </form>
+
+
 </div>
 </div>
 
