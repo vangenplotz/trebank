@@ -3,9 +3,9 @@
 ?>
 
 <div id="main" class="list">
-	<div class="header">
+	<div class="page">
 		<?php if ( is_tax( VA_LISTING_CATEGORY ) || is_tax( VA_LISTING_TAG ) ) { ?>
-			<h1><?php printf( __( 'Business Listings - %s', APP_TD ), single_term_title( '', false )); ?></h1> 
+			<h1><?php printf( __( 'Business Listings - %s', APP_TD ), single_term_title( '', false )); ?></h1>
 		<?php } else { ?>
 			<h1><?php _e( 'Business Listings', APP_TD ); ?></h1>
 		<?php } ?>
@@ -15,9 +15,9 @@
 if ( $featured = va_get_featured_listings() ) :
 	while ( $featured->have_posts() ) : $featured->the_post();
 ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'featured' ); ?>>
+	<article id="post-<?php the_ID(); ?>">
 		<div class="featured-head">
-			<h3><?php _e( 'Featured', APP_TD ); ?></h3>
+			<h2><?php _e( 'Featured', APP_TD ); ?></h2>
 		</div>
 
 		<?php get_template_part( 'content-listing' ); ?>
@@ -80,4 +80,3 @@ if ( have_posts() ) : ?>
 <?php endif; ?>
 
 </div>
-

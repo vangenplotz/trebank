@@ -4,6 +4,8 @@
 
 <?php do_action( 'appthemes_notices' ); ?>
 
+<?php get_sidebar( 'single-listing' ); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php the_listing_image_gallery(); ?>
 
@@ -112,6 +114,4 @@
 
 </div><!-- /#main -->
 
-<div id="sidebar">
-<?php get_sidebar( 'single-listing' ); ?>
-</div>
+
