@@ -19,11 +19,11 @@ Template: vantage
 	html {font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 	html, button, input, select, textarea {font-family:sans-serif;color:#222;}
 	body {margin:0;font-size:1em;line-height:1;}
-	p {padding:7px 0 0 0;}
+	p {padding:7px 0 0 0; margin: 0;}
 	
 	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;font-weight:700;}
 	
-	a {color:#266E9E;text-decoration:none;}
+	a {color:#8d9506;text-decoration:none;}
 	a:focus {outline:0;}
 	a:hover, a:active {outline:0;}
 	
@@ -75,25 +75,11 @@ Template: vantage
 	
 	table {border-collapse:collapse;border-spacing:0;}
 	td {vertical-align:top;}
-
-	body {
-		font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; /* Serve Helvetica Neue, with Helvetica fallbacks to Arial */
-		font-size:11px;
-		font-weight:300; /* Better supported than 'lighter' attribute */
-		line-height:18px;
-		-webkit-font-smoothing:antialiased; /* Antialiased font for great smoothing */
-		-moz-font-smoothing:antialiased;
-		-o-font-smoothing:antialiased;
-		font-smoothing:antialiased;
-		text-rendering:optimizeLegibility; /* Optimise legibility for some CSS3 kerning */
-		color:#444; /* Lighter on the eyes than #000 Black */
-	}
 	
 /* =============================================================================
    Structure
    ========================================================================== */
    body {
-	color: #333;
 	font: normal normal normal 0.75em/normal Arial, Helvetica, sans-serif;
 	background: #fff url('images/background.jpg') repeat-x 0 0;
 	border-top: none;
@@ -104,6 +90,15 @@ Template: vantage
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 40px;
+    margin-top: 40px;
+    font-weight:300; /* Better supported than 'lighter' attribute */
+	line-height:18px;
+	-webkit-font-smoothing:antialiased; /* Antialiased font for great smoothing */
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility; /* Optimise legibility for some CSS3 kerning */
+	color:#200; /* Lighter on the eyes than #000 Black */
 }
 
 #masthead  {
@@ -147,12 +142,12 @@ Template: vantage
     width: 100%;
 }
 #main-search {
-	font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
-    clear: both;
-    margin: 10px 10px 0;
+ 	clear: both;
+    float: left;
+    font-family: Cambria,"Hoefler Text",Utopia,"Liberation Serif","Nimbus Roman No9 L Regular",Times,"Times New Roman",serif;
+    margin: 0 20px;
     overflow: hidden;
     width: 600px;
-    float: left;
 }
 #main-search label {
 	font-size: 2em;
@@ -167,7 +162,7 @@ Template: vantage
 	color: #fff;
 	float: left;
 	font-size: 1em;
-	line-height: 3em;
+	line-height: 2em;
 }
 #main-search input.text {
     background: #fff repeat scroll 0 0;
@@ -296,7 +291,10 @@ Template: vantage
     padding-top: 20px;
 }
 
+.page h1 {
+  padding: 15px 25px;
 
+}
 div.header {
 	padding-bottom: 10px;
 	height: 200px;
@@ -336,14 +334,57 @@ article.listing h1.listing-heading , article h2.listing-heading  {
 	width: 100%;
 }
 .listing-heading a {
-	color: #000;
+	color: #414141;
 	padding: 0 25px;
 }
 article.listing.featured, article.listing {
     margin: 0 ;
     padding: 0;
 }
-
+article.listing img {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    float: right;
+    left: 5px;
+    margin: 5px;
+    padding: 5px;
+    position: inherit;
+}
 div.content-listing {
 	padding: 0 15px ;
+}
+div.tags-header {
+	margin: 0 20px;
+}
+div.tags-header a {
+	color: white;
+	font-size: 1.2em !important;
+	padding: 1px 4px 2px;
+	padding: 1px 5px;
+	margin: 0 2px;
+
+}
+div.tags-header h3 {
+	display: none;
+}
+div.tags-header a:hover {
+	background-color: #414142;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #5E5E60;
+}
+.widget_listing_map {
+	width: 95%;
+	margin: 5px;
+}
+div.content-listing, div.tags {
+    padding: 0 25px;
+}
+div.tags {color: #8D9506;}
+ 
+p.more-info {
+	text-align: center;
+	font-weight: bold;
+
 }

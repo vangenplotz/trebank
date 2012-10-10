@@ -13,8 +13,9 @@
         <input class="sbutton" type="image" alt="Search" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/search.png" />
     </fieldset>
 </form>
-
-
+<div class="tags-header">
+	<?php dynamic_sidebar( 'header' ); ?>
+</div>
 </div>
 </div>
 
