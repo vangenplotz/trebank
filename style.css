@@ -212,8 +212,8 @@ Template: vantage
     background: none repeat scroll 0 0 #414142;
     bottom: 0;
     color: #FFFFFF;
-    line-height: 21px;
-    min-height: 45px;
+    line-height: 20px;
+    min-height: 35px;
     overflow: hidden;
     position: fixed;
     bottom: 0;
@@ -320,13 +320,13 @@ article.listing {
 }
 article > h2 {
     float: left;
-    font-family: Verdana,Geneva,sans-serif;
+    font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
     font-size: 18px;
     font-weight: bold;
     margin: 0 0 6px;
 }
 article.listing h1.listing-heading , article h2.listing-heading  {
-    font-family: Verdana,Geneva,sans-serif;
+    font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
     margin-bottom: 10px;
 	line-height: 2.2em;
 	background-color: #e1e3ae;
@@ -385,6 +385,28 @@ div.tags {color: #8D9506;}
  
 p.more-info {
 	text-align: center;
-	font-weight: bold;
-
+	font-weight: bold;	
+}
+p.more-info a {
+	background: url("images/down_arrow.png") no-repeat scroll 50% 100%;
+	height: 30px;
+	display: block;
+	margin-bottom: 5px;
+}
+p.copyright {
+	float: left;
+	padding-left: 315px;
+}
+p.made-by {
+	float: right !important;
+	padding-right: 35px;
+}
+p.made-by a {
+	text-decoration: none;
+	color: #fff;
+}
+span.custom-field-label {
+	width: 65px;
+	display: block;
+	float: left;
 }
