@@ -15,11 +15,7 @@
 if ( $featured = va_get_featured_listings() ) :
 	while ( $featured->have_posts() ) : $featured->the_post();
 ?>
-	<article id="post-<?php the_ID(); ?>">
-		<div class="featured-head">
-			<h2><?php _e( 'Featured', APP_TD ); ?></h2>
-		</div>
-
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php get_template_part( 'content-listing' ); ?>
 	</article>
 <?php

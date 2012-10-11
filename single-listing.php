@@ -1,13 +1,14 @@
 <div id="main">
 
+<?php get_sidebar( 'single-listing' ); ?>
+<?php the_listing_image_gallery(); ?>
+
 <?php the_post(); ?>
 
 <?php do_action( 'appthemes_notices' ); ?>
 
-<?php get_sidebar( 'single-listing' ); ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php the_listing_image_gallery(); ?>
+
 
 	<?php appthemes_before_post_title( VA_LISTING_PTYPE ); ?>
 	<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -51,18 +52,10 @@
 		<?php the_listing_fields(); ?>
 	</div>
 
-	<div class="single-listing listing-faves">
-		<?php the_listing_faves_link(); ?>
-	</div>
 
 	<div class="listing-actions">
 		<?php the_listing_edit_link(); ?>
 		<?php the_listing_claimable_link(); ?>
-		<?php the_listing_purchase_link(); ?>
-	</div>
-
-	<div class="listing-share">
-		<?php if ( function_exists( 'sharethis_button' ) ) sharethis_button(); ?>
 	</div>
 
 	<hr />
@@ -70,48 +63,7 @@
 
 	<?php the_listing_files(); ?>
 
-	<div id="listing-tabs">
-		<div class="tabs">
-			<a id="overview-tab" class="active-tab rounded-t first" href="#overview"><?php _e( 'Overview', APP_TD ); ?></a>
-			<a id="reviews-tab" class="rounded-t" href="#reviews"><?php _e( 'Reviews', APP_TD ); ?></a>
-
-			<br class="clear" />
-		</div>
-
-		<section id="overview">
-			<?php appthemes_before_post_content( VA_LISTING_PTYPE ); ?>
-			<?php the_content(); ?>
-			<?php appthemes_after_post_content( VA_LISTING_PTYPE ); ?>
-		</section>
-
-		<section id="reviews">
-			<?php get_template_part( 'reviews', 'listing' ); ?>
-		</section>
-	</div>
-
-	<div class="section-head">
-		<a id="add-review" name="add-review"></a>
-		<h2 id="left-hanger-add-review"><?php _e( 'Add Your Review', APP_TD ); ?></h2>
-	</div>
-
-	<?php if ( $review_id = va_get_user_review_id( get_current_user_id(), get_the_ID() ) ) : ?>
-		<p>
-			<?php _e( 'You have already reviewed this listing.', APP_TD ); ?>
-		</p>
-	<?php elseif ( va_user_can_add_reviews() ) : ?>
-		<?php appthemes_load_template( 'form-review.php' ); ?>
-	<?php elseif ( get_current_user_id() == get_the_author_meta('ID') ) : ?>
-		<p>
-			<?php _e( "You can't review your own listing.", APP_TD ); ?>
-		</p>
-	<?php elseif ( !is_user_logged_in() ) : ?>
-		<p>
-			<?php printf( __( "Please %s to add your review.", APP_TD ), html_link( wp_login_url(), __( 'login', APP_TD ) ) ); ?>
-		</p>
-	<?php endif; ?>
-
 </article>
 
 </div><!-- /#main -->
-
 

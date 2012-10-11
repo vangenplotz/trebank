@@ -1,24 +1,25 @@
 <?php
 
-add_action( 'appthemes_first_run', 'va_init_image_sizes' );
-add_filter( 'intermediate_image_sizes_advanced', 'va_set_image_crop' );
-add_filter( 'wp_get_attachment_image_attributes', 'va_attachment_attributes' );
+remove_action( 'appthemes_first_run', 'va_init_image_sizes' );
+add_action( 'appthemes_first_run', 'tre_init_image_sizes' );
+add_filter( 'intermediate_image_sizes_advanced', 'tre_set_image_crop' );
+add_filter( 'wp_get_attachment_image_attributes', 'tre_attachment_attributes' );
 
-function va_init_image_sizes( $sizes ) {
-	update_option( 'thumbnail_size_w', 50 );
-	update_option( 'thumbnail_size_h', 50 );
+function tre_init_image_sizes( $sizes ) {
+	update_option( 'thumbnail_size_w', 150 );
+	update_option( 'thumbnail_size_h', 150 );
 	update_option( 'thumbnail_crop', true );
 
 	update_option( 'medium_size_w', 230 );
 	update_option( 'medium_size_h', 230 );
 
-	va_legacy_image_update();
+	tre_legacy_image_update();
 }
 
 /**
- * Add custom meta '_va_attachment_type' to all existing images before Vantage 1.1
+ * Add custom meta '_tre_attachment_type' to all existing images before Vantage 1.1
  */
-function va_legacy_image_update() {
+function tre_legacy_image_update() {
 
 	list( $args ) = get_theme_support( 'app-versions' );
 	$previous_version = get_option( $args['option_key'] );
@@ -33,19 +34,19 @@ function va_legacy_image_update() {
 
 		$images = get_posts( $args );
 		foreach ( $images  as $image ) {
-			add_post_meta( $image->ID, '_va_attachment_type', VA_ATTACHMENT_GALLERY, true );
+			add_post_meta( $image->ID, '_tre_attachment_type', VA_ATTACHMENT_GALLERY, true );
 		}
 	}
 }
 
-function va_set_image_crop( $sizes ) {
+function tre_set_image_crop( $sizes ) {
 	$sizes['thumbnail']['crop'] = true;
 	$sizes['medium']['crop'] = true;
 
 	return $sizes;
 }
 
-function va_attachment_attributes( $attr ) {
+function tre_attachment_attributes( $attr ) {
 	unset( $attr['title'] );
 
 	return $attr;
@@ -59,13 +60,13 @@ function va_attachment_attributes( $attr ) {
  * @param string  $type			(optional) The attachment type (gallery|file)
  *
  */
-function va_update_featured_image( $listing_id, $attach_id = '', $type = VA_ATTACHMENT_GALLERY ) {
+function tre_update_featured_image( $listing_id, $attach_id = '', $type = VA_ATTACHMENT_GALLERY ) {
 
 	$has_feat_image = (bool) get_post_thumbnail_id( $listing_id );
 
 	// an attachment was deleted, get the next featured image candidate
 	if ( ! $attach_id && ! $has_feat_image ) {
-		$gallery = va_get_listing_attachments( $listing_id, -1, $type, 'ids' );
+		$gallery = tre_get_listing_attachments( $listing_id, -1, $type, 'ids' );
 		$featured_id = array_shift ( $gallery );
 	// an attachment was uploaded
 	} elseif ( $attach_id ) {
@@ -78,7 +79,7 @@ function va_update_featured_image( $listing_id, $attach_id = '', $type = VA_ATTA
 	}
 }
 
-function va_get_attachment_link( $att_id, $size = 'thumbnail' ) {
+function tre_get_attachment_link( $att_id, $size = 'thumbnail' ) {
 	return html( 'a', array(
 		'href' => wp_get_attachment_url( $att_id ),
 		'rel' => 'colorbox',
@@ -92,7 +93,7 @@ function the_listing_thumbnail ( $listing_id = '' ) {
 	$featured_id = get_post_thumbnail_id( $listing_id );
 
 	if ( !$featured_id ) {
-		$attachments = va_get_listing_attachments( $listing_id, 1 );
+		$attachments = tre_get_listing_attachments( $listing_id, 1 );
 
 		if ( empty( $attachments ) ) {
 			echo html( 'img', array( 'src' => get_bloginfo('template_directory') . '/images/no-thumb-sm.jpg' ) );
@@ -102,13 +103,13 @@ function the_listing_thumbnail ( $listing_id = '' ) {
 		$featured_id = $attachments[0]->ID;
 	}
 
-	echo wp_get_attachment_image( $featured_id, 'thumbnails' );
+	echo wp_get_attachment_image( $featured_id, 'thumbnail' );
 }
 
 function the_listing_image_gallery() {
 	$listing_id = get_the_ID();
 
-	$attachments = va_get_listing_attachments( $listing_id, VA_MAX_IMAGES );
+	$attachments = tre_get_listing_attachments( $listing_id, VA_MAX_IMAGES );
 	if ( empty( $attachments ) )
 		return;
 
@@ -119,7 +120,7 @@ function the_listing_image_gallery() {
 
 	echo '<section id="listing-images" class="tb">';
 
-	echo html( 'div class="larger"', va_get_attachment_link( $featured_id, 'medium' ) );
+	echo html( 'div class="larger"', tre_get_attachment_link( $featured_id, 'medium' ) );
 
 	echo '<div class="smaller">';
 	$i = 0;
@@ -130,7 +131,7 @@ function the_listing_image_gallery() {
 		if ( $attachment->ID == $featured_id )
 			continue;
 
-		echo va_get_attachment_link( $attachment->ID );
+		echo tre_get_attachment_link( $attachment->ID );
 		$i++;
 	}
 	echo '</div>';
@@ -139,7 +140,7 @@ function the_listing_image_gallery() {
 }
 
 function the_listing_image_editor( $listing_id ) {
-	$images = va_get_listing_attachments( $listing_id );
+	$images = tre_get_listing_attachments( $listing_id );
 
 	$available_slots = VA_MAX_IMAGES - count( $images );
 

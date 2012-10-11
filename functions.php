@@ -6,6 +6,8 @@ $imagepath = STYLESHEETPATH .'/images/';
 $imageurl = get_bloginfo('stylesheet_directory') .'/images/';
 if (file_exists(STYLESHEETPATH. '/theme-options.php')) include_once ( STYLESHEETPATH . '/theme-options.php' );
 
+
+
 // Register Navigation
 	function register_trebank_menu()
 	{
@@ -29,4 +31,6 @@ function showalltags() {
 	echo $html;
  
 }
+
+
 ?>
