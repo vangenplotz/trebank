@@ -6,6 +6,7 @@ Template: vantage
 */
 
 @import url("../vantage/style.css");
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
 /* =============================================================================
    HTML5 Reset
@@ -21,7 +22,7 @@ Template: vantage
 	body {margin:0;font-size:1em;line-height:1;}
 	p {padding:7px 0 0 0; margin: 0;}
 	
-	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;font-weight:700;}
+	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family: 'Droid Sans', sans-serif, serif;font-weight:700;}
 	
 	a {color:#8d9506;text-decoration:none;}
 	a:focus {outline:0;}
@@ -80,13 +81,13 @@ Template: vantage
    Structure
    ========================================================================== */
    body {
-	font: normal normal normal 0.75em/normal Arial, Helvetica, sans-serif;
+	font-family: 'Droid Sans', sans-serif;
 	background: #fff url('images/background.jpg') repeat-x 0 0;
 	border-top: none;
 	background-attachment: fixed;
     background-clip: border-box;
     background-origin: padding-box;
-    background-position: 50% 50%;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 40px;
@@ -104,7 +105,7 @@ Template: vantage
 #masthead  {
  	background-color: #FFFFFF;
     float: left;
-    height: 180px;
+    height: 135px;
     padding-left: 5px;
     padding-top: 20px;
     width: 295px;
@@ -123,12 +124,11 @@ Template: vantage
     position: relative;
 }
 #search-submit {
-    background: url("images/search.png") no-repeat scroll 0 0 ;
     border: none;
     color: #555555;
     cursor: pointer;
     display: block;
-    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-family: 'Droid Sans', sans-serif;
     font-size: 18px;
     font-style: italic;
     font-weight: bold;
@@ -142,15 +142,13 @@ Template: vantage
     width: 100%;
 }
 #main-search {
- 	clear: both;
     float: left;
-    font-family: Cambria,"Hoefler Text",Utopia,"Liberation Serif","Nimbus Roman No9 L Regular",Times,"Times New Roman",serif;
+    font-family: 'Droid Sans',sans-serif;
     margin: 0 20px;
-    overflow: hidden;
-    width: 600px;
+    width: 285px;
 }
 #main-search label {
-	font-size: 2em;
+	font-size: 1.4em;
 	font-weight: bold;
 	font-style: normal;	
 	color: #fff;
@@ -161,24 +159,25 @@ Template: vantage
 #main-search label.info {
 	color: #fff;
 	float: left;
-	font-size: 1em;
-	line-height: 2em;
+	font-size: 0.8546em;
+	line-height: 1.2em;
 }
 #main-search input.text {
-    background: #fff repeat scroll 0 0;
-    border: solid #fff 1px;
+  background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
     color: #5E5E5E;
+    float: left;
     font-size: 18px;
     height: 35px;
     margin-top: 5px;
-    width: 480px;
     position: relative;
-    float: left;
+    width: 180px;
 }
 #main-search input.sbutton {
-	 display: block;
-    float: left;
-    position: relative;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 45px;
 }
 #content {
  	background: none repeat-x scroll 0 0 #FFFFFF;
@@ -193,9 +192,13 @@ Template: vantage
     position: relative;
     width: 300px;
 }
+
 #sidebar ul {
+    background-color: #5E5E60;
+    float: left;
+    margin: 15px 0;
     overflow: hidden;
-    background-color: #5e5e60;
+    width: 100%;
 }
 #sidebar li {
 	border-bottom: 4px solid #414142;
@@ -283,17 +286,15 @@ Template: vantage
 }
 
 .green {
-	background-color: #b3b935;
-	height: 180px;
-	width: 595px;
-	float: right;
-	padding-left: 5px;
+ 	background-color: #B3B935;
+    float: right;
     padding-top: 20px;
+    width: 300px;
 }
 
 .page h1 {
-  padding: 15px 25px;
-
+  padding: 15px 20px;
+  border-bottom: 1px solid #414142;
 }
 div.header {
 	padding-bottom: 10px;
@@ -316,33 +317,32 @@ article.listing {
 	margin: 0px;
 	padding: 5px;
 	position: relative;
-	border-bottom: 1px solid #E5E5E5;
+	border-bottom: none;
 }
 article > h2 {
     float: left;
-    font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+    font-family: 'Droid Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
     margin: 0 0 6px;
 }
 article.listing h1.listing-heading , article h2.listing-heading  {
-    font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+    font-family: 'Droid Sans', sans-serif;
     margin-bottom: 10px;
 	line-height: 2.2em;
 	background-color: #e1e3ae;
 	font-weight: normal;
 	width: 100%;
 }
-.listing-heading a {
+.listing-heading a, .content-listing a {
 	color: #414141;
-	padding: 0 25px;
+	padding: 0;
 }
 article.listing.featured, article.listing {
     margin: 0 ;
     padding: 0;
 }
 article.listing img {
-    background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
     float: right;
     left: 5px;
@@ -351,7 +351,32 @@ article.listing img {
     position: inherit;
 }
 div.content-listing {
-	padding: 0 15px ;
+    font-family: 'Droid Sans', sans-serif;
+    margin-bottom: 10px;
+	line-height: 2.2em;
+	font-weight: normal;
+	width: 100%;
+	background: url("images/arrow-left.png") no-repeat scroll 100% 50%;
+	background-color: #B3B935;
+}
+
+div.content-listing:hover {
+		background: url("images/arrow-left-hover.png") no-repeat scroll 100% 50%;
+		background-color: #e1e3ae;
+}
+
+div.content-listing img {
+   border: medium none;
+    float: right;
+    margin: 0 10px;
+    padding: 6px;
+    position: relative;
+    top: -30px;
+    background-color: #B3B935;
+}
+.content-listing  p, .content-listing h2 {
+	padding: 5px 20px;
+	
 }
 div.tags-header {
 	margin: 0 20px;
@@ -379,10 +404,58 @@ div.tags-header a:hover {
 	margin: 5px;
 }
 div.content-listing, div.tags {
-    padding: 0 25px;
+    padding: 0;
 }
 div.tags {color: #8D9506;}
- 
+
+#sidebar .section-head {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    height: 35px;
+    margin: 10px 0;
+    position: relative;
+    width: 293px;
+    color: #FFFFFF;
+}
+
+
+#sidebar .section-head h3 {
+   background: none repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 1.6em;
+    font-weight: normal;
+    margin: 0;
+    padding: 7px 15px 17px;
+    width: 244px;
+        text-decoration: none;
+    text-transform: uppercase;
+}
+
+div.tagcloud {
+	background-color: #5E5E60;
+    overflow: hidden;
+}
+
+div.tagcloud a  {
+	font-size: 1.3em !important;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: none;
+    display: block;
+    border-bottom: 4px solid #414142;
+    border-left: 8px solid #414142;
+    margin: 0;
+    padding: 7px 5px 7px 7px;
+}
+div.tagcloud a:hover {
+    text-decoration: none;
+    background-color: #B3B935;
+     -moz-transition: all 0.3s ease 0.1s;
+}
 p.more-info {
 	text-align: center;
 	font-weight: bold;	

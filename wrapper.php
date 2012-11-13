@@ -24,13 +24,13 @@
 <body <?php body_class(); ?>>
 
 	<?php appthemes_before(); ?>
-
+<div class="row">
+	<div id="sidebar">
 	<?php appthemes_before_header(); ?>
 	<?php get_header( app_template_base() ); ?>
 	<?php appthemes_after_header(); ?>
-<div class="row">
-	<div id="sidebar">
 		<?php wp_nav_menu( array( 'theme_location' => 'sidebar-menu' ) ); ?>
+		<?php dynamic_sidebar( 'main' ); ?>
 	</div>
 	<div id="content">
 				<?php include app_template_path(); ?>
