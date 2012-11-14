@@ -8,20 +8,9 @@
 <?php do_action( 'appthemes_notices' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-
 	<?php appthemes_before_post_title( VA_LISTING_PTYPE ); ?>
 	<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	<p class="author"><?php printf( __( 'Added by %s', APP_TD ), va_get_the_author_listings_link() ); ?> </p>
-	<?php the_listing_star_rating(); ?>
-	<p class="reviews"><?php
-		the_review_count();
-
-		if ( va_user_can_add_reviews() ) {
-			echo ', ' . html_link( '#add-review', __( 'Add your review', APP_TD ) );
-		}
-	?></p>
-
 	<?php appthemes_after_post_title( VA_LISTING_PTYPE ); ?>
 
 	<?php $website = get_post_meta( get_the_ID(), 'website', true ); ?>
@@ -55,7 +44,6 @@
 
 	<div class="listing-actions">
 		<?php the_listing_edit_link(); ?>
-		<?php the_listing_claimable_link(); ?>
 	</div>
 
 	<hr />
@@ -66,4 +54,3 @@
 </article>
 
 </div><!-- /#main -->
-

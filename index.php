@@ -32,6 +32,5 @@
 </div>
 
 <div id="sidebar">
-	<?php get_sidebar( app_template_base() ); ?>
-	
+	<?php get_sidebar( app_template_base() ); ?>	
 </div>
