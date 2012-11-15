@@ -4,7 +4,11 @@ Template Name: Frontpage
 */
 ?>
 <div id="main">	
-<?php dynamic_sidebar( 'header' ); ?>
+<?php
+if( function_exists('FA_display_slider') ){
+    FA_display_slider(421);
+}
+?>
 	<?php appthemes_before_page_loop(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
