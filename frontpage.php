@@ -36,7 +36,3 @@ if( function_exists('FA_display_slider') ){
 	<?php appthemes_after_page_loop(); ?>
 
 </div><!-- /#main -->
-
-<div id="sidebar" class="threecol last">
-	<?php get_sidebar( app_template_base() ); ?>
-</div>	
