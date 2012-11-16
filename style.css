@@ -350,8 +350,6 @@ div.header {
     text-decoration: none;
     font-size: 1.2em; 
     text-transform: uppercase;
-	text-shadow: 0px 1px 0px #000;
-	filter: dropshadow(color=#000, offx=0, offy=1);
 }
 
 .menu a:hover {
@@ -540,9 +538,6 @@ div.tagcloud a  {
     border-bottom: 1px solid #414142;
     margin: 0;
     padding: 7px 5px 7px 10px;
-   	text-shadow: 0px 1px 0px #000;
-	filter: dropshadow(color=#000, offx=0, offy=1);
-
 }
 div.tagcloud a:hover {
     text-decoration: none;
@@ -604,6 +599,11 @@ span.custom-field-label {
 .FA_overall_container_smoke.dark .FA_back, .FA_overall_container_smoke .FA_next {
 	border-radius: 4px;
 	line-height: 15px !important;
+}
+
+.FA_overall_container_smoke .FA_featured_articles .FA_article p {
+	font-size: 13px !important;
+	font-weight: 500 !important;
 }
 
 .page article.page img {
