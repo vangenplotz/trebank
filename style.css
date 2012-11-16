@@ -20,7 +20,7 @@ Template: vantage
 	html {font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 	html, button, input, select, textarea {font-family:sans-serif;color:#222;}
 	body {margin:0;font-size:1em;line-height:1;}
-	p {padding:7px 0 0 0; margin: 0; line-height: 20px; color: #000;}
+	p {padding: 7px 20px 0 20px; margin: 0; line-height: 20px; color: #000;}
 	
 	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family: 'Titillium Web', sans-serif, serif;font-weight:500;}
 	
@@ -373,6 +373,10 @@ article.listing:hover {
 
 }
 
+article > h2 {
+	margin: 15px 0px 7px 0 !important;
+}
+
 article > h2 a {
     float: left;
     font-family: 'Titillium Web', sans-serif;
@@ -610,6 +614,11 @@ span.custom-field-label {
 	margin-bottom: 0 !important;
 }
 
+.page article.page p {
+	margin: 0;
+	padding: 0;
+}
+
 .single-listing article.listing h1 a {
     font-family: 'Titillium Web',sans-serif;
     font-weight: 500;
@@ -634,4 +643,12 @@ input:focus {
 
 .page article.page h1 a {
 	margin-left: -20px;
+}
+
+#gallery-1 .gallery-item {
+	margin-bottom: 10px;
+}
+
+p.author, .listing-fields p {
+	padding-left: 0;
 }
