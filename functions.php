@@ -32,5 +32,11 @@ function showalltags() {
  
 }
 
+add_filter( 'wp_get_attachment_link', 'sant_prettyadd');
+ 
+function sant_prettyadd ($content) {
+	$content = preg_replace("/<a/","<a rel=\"prettyPhoto[slides]\"",$content,1);
+	return $content;
+}
 
 ?>
