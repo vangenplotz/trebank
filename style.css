@@ -20,7 +20,7 @@ Template: vantage
 	html {font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
 	html, button, input, select, textarea {font-family:sans-serif;color:#222;}
 	body {margin:0;font-size:1em;line-height:1;}
-	p {padding: 7px 20px 0 20px; margin: 0; line-height: 20px; color: #000;}
+	p {padding: 7px 20px 0 20px; margin: 0; color: #000;}
 	
 	h1,h2,h3,h4,h5,h6 {text-decoration:none;padding:0;color:#444;margin:0;font-family: 'Titillium Web', sans-serif, serif;font-weight:500;}
 	
@@ -82,7 +82,7 @@ Template: vantage
    ========================================================================== */
    body {
 	font-family: 'Titillium Web', sans-serif;
-	background: #fff url('images/background.jpg') repeat-x 0 0;
+	background: #fff url('images/background_dus.jpg') repeat-x 0 0;
 	border-top: none;
 	background-attachment: fixed;
     background-clip: border-box;
@@ -107,7 +107,7 @@ Template: vantage
     float: left;
     height: 135px;
     padding-left: 10px;
-    padding-top: 20px;
+    padding-top: 10px;
     width: 290px;
 }
 
@@ -198,7 +198,7 @@ Template: vantage
     display: block;
     position: absolute;
     right: 8px;
-    top: 53px;
+    top: 54px;
     width: 15%;
 }
 
@@ -217,14 +217,14 @@ Template: vantage
 }
 
 #sidebar ul {
-    background-color: #969696;
+    background-color: #414142;
     float: left;
     margin: 1px 0 0;
     overflow: hidden;
     width: 100%;
 }
 #sidebar li {
-	border-bottom: 1px solid #414142;
+	border-bottom: 1px solid #6D6D6D;
     margin: 0;
     padding: 7px 5px 7px 12px;
     font-size: 13px;
@@ -232,9 +232,14 @@ Template: vantage
 
 #sidebar li:hover {
     text-decoration: none;
-    background-color: #B3B935;
+    background-color: #a3d900;
      -moz-transition: all 0.3s ease 0.1s;
 }
+
+#sidebar li a:hover {
+	color: black;
+}
+
 #footer {
     background: none repeat scroll 0 0 #414142;
     bottom: 0;
@@ -311,7 +316,7 @@ Template: vantage
 }
 
 .green {
- 	background-color: #B3B935;
+ 	background-color: #767676;
     float: right;
     padding-top: 20px;
     width: 300px;
@@ -366,7 +371,7 @@ article.listing {
     margin-bottom: 0;
 	line-height: 2.2em;
 	font-weight: normal;
-	border-bottom: 1px solid #91952f;
+	font-size: 12px;
 }
 
 article.listing:hover {
@@ -438,19 +443,17 @@ div.content-listing {
 	line-height: 2.2em;
 	font-weight: normal;
 	width: 100%;
-	background: url("images/arrow-left.png") no-repeat scroll 100% 50%;
-	background-color: #B3B935;
-	-webkit-box-shadow: inset 0px 0px 0px 1px #bac134;
-	box-shadow: inset 0px 0px 0px 1px #bac134;
+	background-color: #E0E0E0;
+	-webkit-box-shadow: inset 0px 0px 0px 1px #f5f5f5;
+	box-shadow: inset 0px 0px 0px 1px #f5f5f5;
 }
 
 div.content-listing a:hover {
-	color: white;
+
 }
 
 div.content-listing:hover {
-	background: url("images/arrow-left-hover.png") no-repeat scroll 100% 50%;
-	background-color: #bac134;
+	background-color: #fff;
 }
 
 div.content-listing img {
@@ -464,9 +467,9 @@ div.content-listing img {
 }
 .content-listing  p, .content-listing h2 {
 	padding: 5px 20px;
-	color: white;
-	text-shadow: 0px 1px 0px #848924;
-	filter: dropshadow(color=#848924, offx=0, offy=1);
+	text-shadow: 0px 1px 0px #fff;
+	filter: dropshadow(color=#fff, offx=0, offy=1);
+	line-height: 10px;
 }
 div.tags-header {
 	margin: 0 20px;
@@ -494,8 +497,8 @@ div.tags-header a:hover {
 	margin: 20px 10px;
 }
 div.content-listing, div.tags {
-    padding: 0;
-    padding-bottom: 10px;
+    padding: 7px 0 10px;
+    margin: -1px 0;
 }
 div.tags {color: #8D9506;}
 
@@ -509,7 +512,7 @@ div.tags {color: #8D9506;}
     position: relative;
     width: 300px;
     color: #FFFFFF;
-    background-color: #b3b935;
+    background-color: #767676;
 }
 
 
@@ -528,7 +531,7 @@ div.tags {color: #8D9506;}
 }
 
 div.tagcloud {
-	background-color: #969696;
+	background-color: #414142;
     overflow: hidden;
 }
 
@@ -551,10 +554,11 @@ div.tagcloud a  {
 
 div.tagcloud a:hover {
     text-decoration: none;
-    background-color: #dae23f;
+    background-color: #a3d900;
     background-position: -50px 0;
      -moz-transition: all 0.3s ease 0.1s;
      text-shadow: none;
+     color: black;
 }
 
 p.more-info {
@@ -570,6 +574,7 @@ p.more-info a {
 p.copyright {
 	float: left;
 	padding-left: 315px;
+	padding-top: 7px;
 	color: #FFF;
 }
 p.made-by {
@@ -598,10 +603,10 @@ span.custom-field-label {
 .FA_overall_container_smoke .FA_featured_articles .FA_article a.FA_read_more {
 	font-size: 12px !important;
 	border-radius: 4px;
-	background: #b3b935 !important;
+	background: #767676 !important;
 	color: white !important;
-	box-shadow: 0 0 0 1px #c6ce38 inset !important;
-	border: 1px solid #91952F !important;
+	box-shadow: 0 0 0 1px #5d5d5d inset !important;
+	border: 1px solid #5d5d5d !important;
 }
 
 .FA_overall_container_smoke.dark .FA_featured_articles .FA_article h2 a {
@@ -661,3 +666,4 @@ input:focus {
 p.author, .listing-fields p {
 	padding-left: 0;
 }
+
