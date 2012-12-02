@@ -236,7 +236,16 @@ Template: vantage
      -moz-transition: all 0.3s ease 0.1s;
 }
 
-#sidebar li a:hover {
+#sidebar li > a {
+	color: #FFF;
+	height: 30px;
+	margin: -4px -6px;
+	padding: 4px 0 5px 6px;
+	width: 100%;
+	display: block;
+}
+
+#sidebar li > a:hover {
 	color: black;
 }
 
