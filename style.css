@@ -512,12 +512,12 @@ div.tags {color: #8D9506;}
     border-top-left-radius: 0;
     box-shadow: none;
     display: inline-block;
-    height: 52px;
     margin: 0 0;
     position: relative;
     width: 300px;
     color: #FFFFFF;
-    background-color: #767676;
+    background-color: #414142;
+    height: 45px;
 }
 
 
@@ -525,10 +525,9 @@ div.tags {color: #8D9506;}
 	background: none repeat scroll 0 0 transparent;
     color: #FFFFFF;
     font-family: 'Titillium Web',sans-serif;
-    font-size: 1.4em;
     font-weight: normal;
     margin: 0;
-    padding: 17px 10px;
+    padding: 12px 12px 17px !important;
     width: 244px;
     text-decoration: none;
     text-transform: uppercase;
@@ -672,7 +671,50 @@ p.author, .listing-fields p {
 	padding-left: 0;
 }
 
-.FA_overall_container_smoke.dark .FA_featured_articles .FA_wrap {
-	display: none;
+.taxonomy_dropdown_widget_dropdown {
+	width: 300px;
+	border: 1px solid #6d6d6d;
+	height: 30px;
+	padding: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    margin: -1px 0;
+    position: relative;
+    width: 300px;
+    color: #FFFFFF;
+    background-color: #414142;
+    height: 45px;
+    font-family: 'Titillium Web',sans-serif;
+    font-weight: normal;
+    -webkit-appearance:none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+    padding: 7px 11px !important;
+    cursor: hand;
+    cursor: pointer;
+    border-radius: 0;
 }
 
+.taxonomy_dropdown_widget_dropdown:hover {
+	background: #a3d900;
+	color: black;
+}
+
+.taxonomy_dropdown_widget_dropdown option {
+	height: 20px;
+	padding: 10px;
+	background: white;
+	color: black;
+}
+
+.taxonomy_dropdown_widget_dropdown option:hover {
+
+}
+
+.section-head label {
+	font-style: normal;
+	font-size: .9em;
+}
