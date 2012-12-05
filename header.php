@@ -3,7 +3,7 @@
 			<a href="/"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/trebank_logo.png" \></a>
 		</hgroup>
 </div>
-<div class="green">
+<!--<div class="green">
 <form id="main-search" action="/" method="get">
     <fieldset>
         <label for="search">S&Oslash;K  </label>
@@ -12,4 +12,4 @@
         <input class="sbutton" type="image" alt="Search" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sok_blankt.png" />
     </fieldset>
 </form>
-</div>
+</div>-->

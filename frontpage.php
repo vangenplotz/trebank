@@ -5,8 +5,9 @@ Template Name: Frontpage
 ?>
 <div id="main">	
 <?php
-if( function_exists('FA_display_slider') ){
-    FA_display_slider(421);
+if(is_front_page())
+{
+if(function_exists('wp_content_slider')) { wp_content_slider(); } 
 }
 ?>
 	<?php appthemes_before_page_loop(); ?>
