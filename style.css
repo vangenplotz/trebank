@@ -755,3 +755,7 @@ p.author, .listing-fields p {
 	color: black;
 	text-decoration: none;
 }
+
+#masthead img {
+	padding-top: 55px;
+}
