@@ -759,3 +759,8 @@ p.author, .listing-fields p {
 #masthead img {
 	padding-top: 55px;
 }
+
+div.pdf_nedlastning p {
+	margin: 0;
+	padding: 0;
+}

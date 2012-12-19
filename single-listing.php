@@ -41,6 +41,9 @@
 		<?php the_listing_fields(); ?>
 	</div>
 
+	<div class="pdf_nedlastning">
+		<?php the_content(); ?>
+	</div>
 
 	<div class="listing-actions">
 		<?php the_listing_edit_link(); ?>
