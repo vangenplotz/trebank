@@ -206,7 +206,8 @@ Template: vantage
  	background: none repeat-x scroll 0 0 #FFFFFF;
     display: block;
     float: right;
-    width: 600px;  
+    width: 600px;
+    min-height: 532px;
 }
 #sidebar {
     background-color: #414142;
@@ -414,6 +415,16 @@ article.listing img {
 
 #listing-images {
 	margin: 8px 20px 24px !important;
+	border: 0;
+}
+
+#listing-images .larger {
+	background: none;
+	border-bottom: 0;
+}
+
+#listing-images .larger img {
+	border: 0;
 }
 
 .single-listing article.listing {
@@ -763,4 +774,8 @@ p.author, .listing-fields p {
 div.pdf_nedlastning p {
 	margin: 0;
 	padding: 0;
+}
+
+#listing-images .smaller {
+	display: none;
 }

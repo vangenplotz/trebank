@@ -10,7 +10,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php appthemes_before_post_title( VA_LISTING_PTYPE ); ?>
 	<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-	<p class="author"><?php printf( __( 'Added by %s', APP_TD ), va_get_the_author_listings_link() ); ?> </p>
+<!--	<p class="author"><?php printf( __( 'Added by %s', APP_TD ), va_get_the_author_listings_link() ); ?> </p> -->
 	<?php appthemes_after_post_title( VA_LISTING_PTYPE ); ?>
 
 	<?php $website = get_post_meta( get_the_ID(), 'website', true ); ?>
@@ -50,7 +50,7 @@
 	</div>
 
 	<hr />
-	<div class="tags"><?php the_listing_tags( '<span>' . __( 'Tags:', APP_TD ) . '</span> ' ); ?></div>
+	<div class="tags"><?php the_listing_tags( '<span>' . __( 'Tjenester:', APP_TD ) . '</span> ' ); ?></div>
 
 	<?php the_listing_files(); ?>
 
