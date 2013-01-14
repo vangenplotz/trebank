@@ -779,3 +779,70 @@ div.pdf_nedlastning p {
 #listing-images .smaller {
 	display: none;
 }
+
+.pdfikon {
+	height: 16px;
+	width: 16px;
+	padding: 0 2px;
+	top: 1px;
+	display: block;
+	position: relative;
+	background: transparent url(images/pdf_ikon_16x16.png) no-repeat;
+	float: left;
+}
+
+.norsktrevare {
+	height: 63px;
+	width: 50px;
+	padding: 5px;
+	top: 4px;
+	display: block;
+	position: relative;
+	background: transparent url(images/norsktrevare_50x63.png) no-repeat;
+	float: left;
+}
+
+.startbank {
+	height: 26px;
+	width: 131px;
+	top: 26px;
+	display: inline-block;
+	position: relative;
+	background: transparent url(images/startbank.gif) no-repeat;
+}
+
+.svanemerke {
+	height: 50px;
+	width: 50px;
+	top: 14px;
+	display: inline-block;
+	position: relative;
+	background: transparent url(images/svanemerke.png) no-repeat;
+}
+
+.vestfoldlauv {
+	height: 59px;
+	width: 50px;
+	top: 14px;
+	display: inline-block;
+	position: relative;
+	background: transparent url(images/vestfoldlauv.png) no-repeat;	
+}
+
+.fyr {
+	height: 60px;
+	width: 70px;
+	top: 0px;
+	display: inline-block;
+	position: relative;
+	background: transparent url(images/fyr.png) no-repeat;	
+}
+
+.snekkern {
+	height: 38px;
+	width: 124px;
+	top: 20px;
+	display: inline-block;
+	position: relative;
+	background: transparent url(images/snekkern.png) no-repeat;	
+}
