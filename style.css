@@ -846,3 +846,7 @@ div.pdf_nedlastning p {
 	position: relative;
 	background: transparent url(images/snekkern.png) no-repeat;	
 }
+
+.registrering {
+	margin-bottom: 25px;
+}
