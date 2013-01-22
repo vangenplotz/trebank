@@ -805,7 +805,7 @@ div.pdf_nedlastning p {
 .startbank {
 	height: 26px;
 	width: 131px;
-	top: 26px;
+	top: 4px;
 	display: inline-block;
 	position: relative;
 	background: transparent url(images/startbank.gif) no-repeat;
@@ -846,6 +846,26 @@ div.pdf_nedlastning p {
 	position: relative;
 	background: transparent url(images/snekkern.png) no-repeat;	
 }
+
+.mestermerke {
+	height: 50px;
+	width: 60px;
+	top: 12px;
+	display: inline-block;
+	position: relative;
+	background: transparent url(images/mestermerke.png) no-repeat;	
+}
+
+.mesterlaug {
+	height: 49px;
+	width: 50px;
+	top: 10px;
+	display: inline-block;
+	position: relative;
+	background: transparent url(images/mesterlaug.png) no-repeat;	
+}
+
+
 
 .registrering {
 	margin-bottom: 25px;
