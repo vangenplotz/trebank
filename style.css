@@ -753,12 +753,13 @@ p.author, .listing-fields p {
 	font-size: 15px !important;
 	list-style: none;
 	width: 275px;
-	height: 33px;
-	padding: 13px 12px 0 13px;
-	border-bottom: 1px solid #6d6d6d;
-	margin: -1px 0;
+	height: 22px;
+	padding: 4px 0 0 25px;
+	border-bottom: 1px solid #414142;
+	margin: 0;
 	color: white;
 	text-transform: uppercase;
+	background: #676869;
 }
 
 .tjenester:hover, .tags_listing a:hover {
